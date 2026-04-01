@@ -51,8 +51,8 @@ const AddDoctor = () => {
       const res = await fetch('http://localhost:5000/api/admin/add-doctor', {
         method: 'POST',
         headers: {
-          Authorization: `Bearer ${token}`
-        },
+            atoken: token
+          },
         body: data
       })
       const result = await res.json()
