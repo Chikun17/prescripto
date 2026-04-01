@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 /* :root {
   --color-primary: #5f6FFF;
 } */
@@ -12,4 +12,8 @@
 .no-scrollbar {
   -ms-overflow-style: none;  /* IE/Edge */
   scrollbar-width: none;     /* Firefox */
+}
+
+*{
+  font-family: Outfit;
 }
