@@ -1,61 +1,62 @@
 import mongoose from "mongoose";
 
 const doctorSchema = new mongoose.Schema({
-    name:{
-        type:String,
-        require:true
+    name: {
+        type: String,
+        required: true
     },
-    email:{
-        type:String,
-        require:true,
-        unique:true
+    email: {
+        type: String,
+        required: true,
+        unique: true
     },
-    password:{
-        type:String,
-        require:true
+    password: {
+        type: String,
+        required: true
     },
-    iamge:{
-        type:String,
-        require:true
+    image: {   // ✅ FIXED
+        type: String,
+        required: true
     },
-    speciality:{
-        type:String,
-        require:true
+    speciality: {
+        type: String,
+        required: true
     },
-    degree:{
-        type:String,
-        require:true
+    degree: {
+        type: String,
+        required: true
     },
-    experince:{
-        type:String,
-        require:true
+    experience: {   // ✅ FIXED
+        type: String,
+        required: true
     },
-    about:{
-        type:String,
-        require:true
+    about: {
+        type: String,
+        required: true
     },
-    availabe:{
-        type:Boolean,
-        default:true
+    available: {   // ✅ FIXED
+        type: Boolean,
+        default: true
     },
-    fee:{
-        type:Number,
-        require:true
+    fees: {   // ✅ FIXED
+        type: Number,
+        required: true
     },
-    address:{
-        type:Object,
-        require:true
+    address: {
+        type: Object,
+        required: true
     },
-    date:{
-        type:Number,
-        require:true
+    date: {
+        type: Number,
+        required: true
     },
-    slots_booked:{
-        type:Object,
-        default:{}
+    slots_booked: {
+        type: Object,
+        default: {}
     },
-},{minimize:false})
+}, { minimize: false })
 
-const doctorModel=mongoose.models.doctor || mongoose.model('doctor',doctorSchema)
+// ✅ IMPORTANT FIX (remove cache issue)
+const doctorModel = mongoose.model('doctor', doctorSchema)
 
 export default doctorModel
