@@ -65,5 +65,4 @@ prescripto/
 │   └── React.js frontend
 │
 ├── .gitignore
-├── LICENSE
 └── README.md
